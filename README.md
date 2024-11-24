@@ -4,6 +4,7 @@
 
 ## 🛠️ Tools and Languages (Not Mastered But Still Learning)
 
+<div align="center">
   <img src="https://skillicons.dev/icons?i=c" />
   <img src="https://skillicons.dev/icons?i=cpp" />
   <img src="https://skillicons.dev/icons?i=java" />
@@ -32,6 +33,7 @@
   <img src="https://skillicons.dev/icons?i=bash" />
   <img src="https://skillicons.dev/icons?i=opencv" />
   <img src="https://skillicons.dev/icons?i=aws" />
+</div>
 
 ## ✨ Other Interests
 
