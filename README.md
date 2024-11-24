@@ -21,16 +21,13 @@ Hello! I'm Evan, a high school senior passionate about **CS**.
 
 ## ✨ Other Interests
 
-- 🔢 Exploring **quantitative finance** through algorithms and market analysis.
-- 🎾 Competing in **tennis**, blending strategy and discipline on the court.
-- 🧩 Tackling **puzzles and algorithms** in competitive programming.
-- 🌎 Aspiring to study abroad and **explore cultures**.
+- 🔢 Trading the stock market and crypto
+- 🎾 Playing tennis
 
 ## 🔭 Current Projects
 
-- 🚀 Building a **chatbot** for my high school’s computer science club using **ChatGPT API**.
-- 📊 Developing a **stock analysis tool** with Python and finance libraries.
-- 🌐 Designing an interactive **webpage** for the school's computer science department.
+- 🚀 Building a **AI Image Classifier**.
+- 🌐 Designing an **webpage** for the school's computer science department.
 
 ## 🌱 Currently Learning
 
