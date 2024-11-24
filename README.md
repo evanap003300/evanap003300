@@ -35,22 +35,3 @@ Hello! I'm Evan Phillips, a high school senior passionate about **computer scien
 ## 🌱 Currently Learning
 
 - **Operating system fundamentals** with xv6-RISCV for a RISC device.
-- Advanced Python tools like **NumPy**, **Matplotlib**, and **Flask**.
-- Exploring **game development** with Unity.
-
-## 💡 Fun Fact
-
-I’ve balanced academics and extracurriculars, like playing tennis since age 7, and even captained a tutoring program to share my love for **computer science**.
-
----
-
-### 📫 How to Reach Me
-
-Feel free to connect with me:
-
-- 📧 Email: [evanphillips@example.com](mailto:evanphillips@example.com)
-- 🐦 Twitter: [@evan_codes](https://twitter.com/evan_codes)
-- 💼 LinkedIn: [Evan Phillips](https://www.linkedin.com/in/evanphillips)
-
----
-✨ _This is a special repository that appears on my GitHub profile._
