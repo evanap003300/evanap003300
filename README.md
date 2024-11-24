@@ -1,6 +1,6 @@
 # 🌟 About Me
 
-Hello! I'm Evan Phillips, a high school senior passionate about **computer science, finance, and tennis**. I enjoy exploring innovative projects in **data science, software development**, and **competitive programming** while working on creative and meaningful solutions.
+Hello! I'm Evan, a high school senior passionate about **CS**.
 
 ## 🛠️ Tools and Languages (Not Mastered But Still Learning)
 
