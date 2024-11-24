@@ -4,20 +4,34 @@
 
 ## 🛠️ Tools and Languages (Not Mastered But Still Learning)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white&style=flat-square" />
-  <img src="https://img.shields.io/badge/-Java-007396?logo=java&logoColor=white&style=flat-square" />
-  <img src="https://img.shields.io/badge/-C-00599C?logo=c&logoColor=white&style=flat-square" />
-  <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat-square" />
-  <img src="https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat-square" />
-  <img src="https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat-square" />
-  <img src="https://img.shields.io/badge/-Pandas-150458?logo=pandas&logoColor=white&style=flat-square" />
-  <img src="https://img.shields.io/badge/-Matplotlib-2088FF?logo=plotly&logoColor=white&style=flat-square" />
-  <img src="https://img.shields.io/badge/-Django-092E20?logo=django&logoColor=white&style=flat-square" />
-  <img src="https://img.shields.io/badge/-Linux-FCC624?logo=linux&logoColor=black&style=flat-square" />
-  <img src="https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white&style=flat-square" />
-  <img src="https://img.shields.io/badge/-VS_Code-007ACC?logo=visual-studio-code&logoColor=white&style=flat-square" />
-</p>
+  <img src="https://skillicons.dev/icons?i=c" />
+  <img src="https://skillicons.dev/icons?i=cpp" />
+  <img src="https://skillicons.dev/icons?i=java" />
+  <img src="https://skillicons.dev/icons?i=python" />
+  <img src="https://skillicons.dev/icons?i=flask" />
+  <img src="https://skillicons.dev/icons?i=django" />
+  <img src="https://skillicons.dev/icons?i=docker" />
+  <img src="https://skillicons.dev/icons?i=css" />
+  <img src="https://skillicons.dev/icons?i=html" />
+  <img src="https://skillicons.dev/icons?i=js" />
+  <img src="https://skillicons.dev/icons?i=nodejs" />
+  <img src="https://skillicons.dev/icons?i=ts" />
+  <img src="https://skillicons.dev/icons?i=nextjs" />
+  <img src="https://skillicons.dev/icons?i=react" />
+  <img src="https://skillicons.dev/icons?i=electron" />
+  <img src="https://skillicons.dev/icons?i=tailwind" />
+  <img src="https://skillicons.dev/icons?i=vscode" />
+  <img src="https://skillicons.dev/icons?i=visualstudio" />
+  <img src="https://skillicons.dev/icons?i=androidstudio" />
+  <img src="https://skillicons.dev/icons?i=idea" />
+  <img src="https://skillicons.dev/icons?i=cmake" />
+  <img src="https://skillicons.dev/icons?i=gradle" />
+  <img src="https://skillicons.dev/icons?i=linux" />
+  <img src="https://skillicons.dev/icons?i=raspberrypi" />
+  <img src="https://skillicons.dev/icons?i=powershell" />
+  <img src="https://skillicons.dev/icons?i=bash" />
+  <img src="https://skillicons.dev/icons?i=opencv" />
+  <img src="https://skillicons.dev/icons?i=aws" />
 
 ## ✨ Other Interests
 
