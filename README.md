@@ -1,6 +1,6 @@
 # 🌟 About Me
 
-Hello! I'm Evan, a high school senior passionate about **CS**.
+  Hello! I'm Evan, a high school senior passionate about **CS**.
 
 ## 🛠️ Tools and Languages (Not Mastered But Still Learning)
 
