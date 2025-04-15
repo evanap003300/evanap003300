@@ -22,9 +22,8 @@
 
 ## 🔭 Current Projects
 
-- 🚀 Building a **AI Image Classifier**.
-- 🌐 Designing an **webpage** for the school's computer science department.
+- 🚀 Building a **Operating System**.
 
 ## 🌱 Currently Learning
 
-- **Operating system fundamentals** with xv6-RISCV for a RISC device.
+- **Operating system fundamentals** with x86 for my 32 bit operating system.
