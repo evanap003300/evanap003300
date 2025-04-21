@@ -15,11 +15,6 @@
   <img src="https://skillicons.dev/icons?i=linux" />
 </div>
 
-## ✨ Other Interests
-
-- 🔢 Trading the stock market and crypto
-- 🎾 Playing tennis
-
 ## 🔭 Current Projects
 
 - 🚀 Building a **Operating System**.
