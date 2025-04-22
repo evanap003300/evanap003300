@@ -21,4 +21,4 @@
 
 ## 🌱 Currently Learning
 
-- **Operating system fundamentals** with x86 for my 32 bit operating system.
+- **Operating system fundamentals** with x86 for my 32-bit operating system.
