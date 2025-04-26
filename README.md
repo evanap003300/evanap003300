@@ -17,8 +17,8 @@
 
 ## 🔭 Current Projects
 
-- 🚀 Building a **Operating System**.
+- 🚀 Building a **Tennis shot classifier**.
 
 ## 🌱 Currently Learning
 
-- **Operating system fundamentals** with x86 for my 32-bit operating system.
+- **Machine Learning fundamentals** working with cv2 and tensorflow.
