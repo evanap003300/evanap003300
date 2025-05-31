@@ -1,6 +1,6 @@
 # 🌟 About Me
 
-  Hello! I'm Evan, a high school senior passionate about **CS**.
+  Hello! I'm Evan, a freshman **CS** student at **UNC Chapel Hill**.
 
 ## 🛠️ Tools and Languages
 
@@ -17,8 +17,8 @@
 
 ## 🔭 Current Projects
 
-- 🚀 Building a **Tennis shot classifier**.
+- 🚀 Building a **Startup**.
 
 ## 🌱 Currently Learning
 
-- **Machine Learning fundamentals** working with cv2 and tensorflow.
+- **Full Stack Development** working with FastAPI, React, and Supabase.
