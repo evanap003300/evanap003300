@@ -17,7 +17,7 @@
 
 ## 🔭 Current Projects
 
-- 🚀 Building a **Businuss Website**.
+- 🚀 Building a **Personal Website**.
 
 ## 🌱 Currently Learning
 
