@@ -1,6 +1,6 @@
 # 🌟 About Me
 
-  Hello! I'm Evan, a freshman **CS** student at **UNC Chapel Hill**.
+  Hello! I'm Evan, a freshman/sophomore **CS** student at **UNC Chapel Hill**.
 
 ## 🛠️ Tools and Languages
 
