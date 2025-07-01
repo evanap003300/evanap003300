@@ -7,7 +7,7 @@ I'm a freshman **Computer Science** student at **UNC Chapel Hill**.
 ---
 
 <h2>
-  GitHub Stats:
+  GitHub Stats
 </h2>
 
 <a href="https://github.com/evanap003300">
@@ -20,7 +20,7 @@ I'm a freshman **Computer Science** student at **UNC Chapel Hill**.
 ---
 
 <h2>
-  Connect with Me:
+  Connect with Me
 </h2>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Evan%20Phillips-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/evan-phillips111)
