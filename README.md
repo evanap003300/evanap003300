@@ -2,9 +2,9 @@
   Hi, I'm Evan!
 </h1>
 
-<h3>
+<h4>
   I'm a freshman **Computer Science** student at **UNC Chapel Hill**.
-</h3>
+</h4>
 
 ---
 
