@@ -3,7 +3,7 @@
 </h1>
 
 <h4>
-  I'm a freshman **Computer Science** student at **UNC Chapel Hill**.
+  I'm a freshman Computer Science student at UNC Chapel Hill.
 </h4>
 
 ---
