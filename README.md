@@ -13,4 +13,4 @@ I'm a freshman **Computer Science** student at **UNC Chapel Hill**.
 
 ## 🌐 Contact with me
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-evanap-blue?logo=linkedin&style=for-the-badge)](www.linkedin.com/in/evan-phillips111)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Evan%20Phillips-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/evan-phillips111)
