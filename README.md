@@ -2,6 +2,8 @@
 
   Hello! I'm Evan, a freshman **CS** student at **UNC Chapel Hill**.
 
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=evanap003300)](https://github.com/anuraghazra/github-readme-stats)
+
 ## 🛠️ Tools and Languages
 
 
