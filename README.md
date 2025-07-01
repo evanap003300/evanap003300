@@ -5,17 +5,8 @@
 ## 🛠️ Tools and Languages
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=c" />
-  <img src="https://skillicons.dev/icons?i=java" />
-  <img src="https://skillicons.dev/icons?i=python" />
-  <img src="https://skillicons.dev/icons?i=css" />
-  <img src="https://skillicons.dev/icons?i=html" />
-  <img src="https://skillicons.dev/icons?i=vscode" />
-  <img src="https://skillicons.dev/icons?i=visualstudio" />
-  <img src="https://skillicons.dev/icons?i=linux" />
+  [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=evanap003300)](https://github.com/anuraghazra/github-readme-stats)
 </div>
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=evanap003300)](https://github.com/anuraghazra/github-readme-stats)
 
 ## 🔭 Current Projects
 
