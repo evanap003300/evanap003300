@@ -1,4 +1,6 @@
-  Hello! I'm Evan, a freshman **CS** student at **UNC Chapel Hill**.
+# 👋 Hi, I'm Evan
+
+I'm a freshman **Computer Science** student at **UNC Chapel Hill**.
 
   <a href="https://github.com/anuraghazra/github-readme-stats">
   <img height=200 align="center" src="https://github-readme-stats.vercel.app/api?username=evanap003300" />
