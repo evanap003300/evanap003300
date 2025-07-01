@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Evan
+# Hi, I'm Evan
 
 I'm a freshman **Computer Science** student at **UNC Chapel Hill**.
 
