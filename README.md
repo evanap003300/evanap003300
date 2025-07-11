@@ -1,9 +1,6 @@
-<h1>
-  Hi, I'm Evan!
-</h1>
-
 [![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Hi,+I'm+Evan!)](https://git.io/typing-svg)
 
+---
 <h4>
   I'm a freshman Computer Science student at UNC Chapel Hill.
 </h4>
