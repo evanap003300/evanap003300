@@ -1,10 +1,8 @@
-<p align="left" style="line-height: 1; margin: 0; padding: 0; height: 0px;">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=500&color=F356F9&width=240&lines=Hi%2C+I'm+Evan;I'm+a+freshman" alt="Typing SVG" />
+<p align="left" style="line-height: 1; margin: 0; padding: 0;">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=2000&pause=100&color=F356F9&width=380&lines=Hi%2C+I'm+Evan%2C+a+freshman+CS+student+at+UNC+Chapel+Hill" alt="Typing SVG" />
 </p>
 
 ---
-
-
 
 <a href="https://github.com/evanap003300">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=evanap003300&show_icons=true&hide_border=true&count_private=true&theme=radical"/>
