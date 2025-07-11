@@ -1,5 +1,4 @@
-<!-- Left-aligned animated header -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=28&pause=1000&color=FF6EC7&width=300&lines=Hi%2C+I'm+Evan)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=28&pause=100&color=FF6EC7&width=300&lines=Hi%2C+I'm+Evan)](https://git.io/typing-svg)
 
 ---
 <h4>
