@@ -2,6 +2,8 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=26&pause=500&color=F356F9&width=280&lines=Hi%2C+I'm+Evan" alt="Typing SVG" />
 </p>
 
+---
+
 <h4>
   I'm a freshman Computer Science student at UNC Chapel Hill.
 </h4>
