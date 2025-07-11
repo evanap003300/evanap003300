@@ -1,4 +1,5 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Hi,+I'm+Evan!)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=24&pause=1000&color=F97316&center=true&vCenter=true&width=435&lines=Hi%2C+I'm+Evan+Phillips!;CS+student+%40+UNC+Chapel+Hill+%F0%9F%93%9A;Startup+Builder+%7C+Fullstack+Developer;Machine+Learning+%7C+Voice+Apps+%7C+FastAPI+%2B+React)](https://git.io/typing-svg)
+
 ---
 <h4>
   I'm a freshman Computer Science student at UNC Chapel Hill.
