@@ -4,12 +4,6 @@
 
 ---
 
-<h4>
-  I'm a freshman Computer Science student at UNC Chapel Hill.
-</h4>
-
----
-
 
 
 <a href="https://github.com/evanap003300">
