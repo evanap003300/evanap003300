@@ -3,7 +3,7 @@
 </p>
 
 ---
-<h2 style="color:#4AA9F1; font-family:Fira Code, monospace; font-weight:700; text-shadow: 1px 1px 2px #000000;">Boring Stats:</h2>
+<h2 style="color:#4AA9F1; font-family:Fira Code, monospace; font-weight:500; text-shadow: 1px 1px 2px #000000;">Boring Stats:</h2>
 
 <p align="center">
   <a href="https://github.com/evanap003300" style="margin-right: 15px;">
