@@ -16,17 +16,11 @@
 
 <p align="center">
   <a href="https://leetcode.com/evanap0330">
-    <img height="260em" src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="LeetCode Stats"/>
+    <img height="280em" src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="LeetCode Stats"/>
   </a>
   <a href="https://github.com/evanap003300" style="margin-right: 15px;">
-    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=evanap003300&layout=compact&langs_count=8&hide_border=true&theme=radical"/>
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://leetcode.com/evanap0330">
-    <img height="260em" src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="LeetCode Stats"/>
-  </a>
+        <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=evanap003300&layout=compact&langs_count=8&hide_border=true&theme=radical"/>
+    </a>
 </p>
 
 ![](https://raw.githubusercontent.com/evanap003300/CF-Stats/main/output/light_card.svg#gh-dark-mode-only)
