@@ -20,6 +20,15 @@
   </a>
 </p>
 
+<a href="https://codeforces.com/profile/evanap0330"> <!-- Replace evanap0330 with your actual Codeforces handle -->
+        <img height="260em" src="https://github-readme-stats.vercel.app/api/pin/?username=evanap0330&repo=your-codeforces-repo&theme=radical&hide_border=true" alt="Codeforces Stats"/>
+        <!-- Note: The above is a placeholder. A direct Codeforces stats card generator might be better.
+             Let's use a more direct Codeforces stats card if available, or a custom SVG.
+             A common approach is to use a custom SVG for Codeforces or a simpler badge.
+             Since github-readme-stats doesn't directly support Codeforces stats, we'll look for alternatives.
+        -->
+    </a>
+
 ---
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Evan%20Phillips-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/evan-phillips111)
