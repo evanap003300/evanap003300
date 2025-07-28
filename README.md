@@ -7,13 +7,13 @@
 
 <p align="center">
   <a href="https://github.com/evanap003300">
-    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=evanap003300&show_icons=true&count_private=true&hide_border=true&theme=radical"/>
+    <img height="140em" src="https://github-readme-stats.vercel.app/api?username=evanap003300&show_icons=true&count_private=true&hide_border=true&theme=radical"/>
   </a>
   <a href="https://github.com/evanap003300">
-    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=evanap003300&layout=compact&langs_count=8&hide_border=true&theme=radical"/>
+    <img height="140em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=evanap003300&layout=compact&langs_count=8&hide_border=true&theme=radical"/>
   </a>
   <p align="center">
-    <img src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="Leetcode Stats" height="180em"/>
+    <img src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="Leetcode Stats" height="140em"/>
   </p>
 </p>
 
