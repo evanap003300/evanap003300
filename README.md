@@ -4,7 +4,6 @@
 
 ---
 
-<h2 style="color:#4AA9F1; font-family:Fira Code, monospace; font-weight:700; text-shadow: 1px 1px 2px #000000;">Boring Stats:</h2>
 <p align="center">
   <a href="https://github.com/evanap003300" style="margin-right: 15px;">
     <img height="180em" src="https://github-readme-stats.vercel.app/api?username=evanap003300&show_icons=true&count_private=true&hide_border=true&theme=radical"/>
