@@ -3,7 +3,7 @@
 </p>
 
 ---
-### Boring Stats
+### Boring Stats:
 
 <p align="center">
   <a href="https://github.com/evanap003300">
@@ -16,7 +16,7 @@
 
 ---
 
-### Competitive Programming Stuff
+### Competitive Programming Stuff:
 
 <p align="center">
   <img src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="Leetcode Stats" height="200"/>
