@@ -21,7 +21,7 @@
     <a href="https://codeforces.com/profile/evanap0330" style="margin-right: 15px;"> <!-- Added margin-right for spacing -->
         <picture>
             <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/evanap003300/CF-Stats/main/output/dark_card.svg">
-            <img height="180em" src="https://raw.githubusercontent.com/evanap003300/cf-stats/main/output/light_card.svg" alt="Codeforces Stats Card">
+            <img height="180em" src="https://raw.githubusercontent.com/evanap003300/CF-Stats/main/output/light_card.svg" alt="Codeforces Stats Card">
         </picture>
     </a>
 </p>
