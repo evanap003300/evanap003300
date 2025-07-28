@@ -18,10 +18,10 @@
   <a href="https://leetcode.com/evanap0330">
     <img height="180em" src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="LeetCode Stats"/>
   </a>
-  <img height="180em" src="https://raw.githubusercontent.com/evanap003300/CF-Stats/main/output/light_card.svg#gh-dark-mode-only" alt="Codeforces Stats"/>
+  <a href="[https://codeforces.com/profile/evanap0330">
+    <img height="180em" src="https://raw.githubusercontent.com/evanap003300/CF-Stats/main/output/light_card.svg#gh-dark-mode-only" alt="Codeforces Stats"/>
+  </a>
 </p>
-
-![](https://raw.githubusercontent.com/evanap003300/CF-Stats/main/output/light_card.svg#gh-dark-mode-only)
 
 ![](https://raw.githubusercontent.com/evanap003300/CF-Stats/main/output/max_rating.svg)
 
