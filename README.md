@@ -23,8 +23,6 @@
   </a>
 </p>
 
-![](https://raw.githubusercontent.com/evanap003300/CF-Stats/main/output/max_rating.svg)
-
 ---
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Evan%20Phillips-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/evan-phillips111)
