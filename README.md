@@ -20,8 +20,8 @@
 
 <p align="center">
   <img src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="Leetcode Stats" height="200"/>
-  <img src="https://cf-api.vercel.app/api/profile?username=evanap0330&theme=dark" alt="Codeforces Profile" height="200"/>
 </p>
+[![Codeforces](https://img.shields.io/badge/Codeforces-evanap0330-orange?style=for-the-badge&logo=codeforces)](https://codeforces.com/profile/evanap0330)
 
 ---
 
