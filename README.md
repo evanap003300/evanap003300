@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="https://leetcode.com/evanap0330">
-    <img height="250em" src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="LeetCode Stats"/>
+    <img height="260em" src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="LeetCode Stats"/>
   </a>
 </p>
 
