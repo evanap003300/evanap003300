@@ -6,14 +6,14 @@
 ### Boring Stats:
 
 <p align="center">
-  <a href="https://github.com/evanap003300" style="margin-right: 10px;">
-    <img height="130em" src="https://github-readme-stats.vercel.app/api?username=evanap003300&show_icons=true&count_private=true&hide_border=true&theme=radical"/>
+  <a href="https://github.com/evanap003300" style="margin-right: 15px;">
+    <img height="140em" src="https://github-readme-stats.vercel.app/api?username=evanap003300&show_icons=true&count_private=true&hide_border=true&theme=radical"/>
   </a>
-  <a href="https://github.com/evanap003300" style="margin-right: 10px;">
-    <img height="130em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=evanap003300&layout=compact&langs_count=8&hide_border=true&theme=radical"/>
+  <a href="https://github.com/evanap003300" style="margin-right: 15px;">
+    <img height="140em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=evanap003300&layout=compact&langs_count=8&hide_border=true&theme=radical"/>
   </a>
   <a href="https://leetcode.com/evanap0330">
-    <img height="130em" src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="LeetCode Stats"/>
+    <img height="140em" src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="LeetCode Stats"/>
   </a>
 </p>
 
