@@ -11,6 +11,7 @@
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=evanap003300&layout=compact&langs_count=8&hide_border=true&theme=radical"/>
 </a>
 
+![Leetcode Stats](https://leetcard.jacoblin.cool/evanap0330)
 ![Codeforces](https://cf.leed.at?id=evanap0330)
 
 ---
