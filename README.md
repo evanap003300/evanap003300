@@ -20,15 +20,12 @@
   </a>
 </p>
 
-<p align="center">
-    <a href="https://leetcode.com/evanap0330">
-        <img src="https://img.shields.io/badge/LeetCode-evanap0330-orange?style=for-the-badge&logo=leetcode&color=orange" alt="LeetCode Badge"/>
-    </a>
-    <a href="https://codeforces.com/profile/evanap0330"> <!-- Replace evanap0330 with your actual Codeforces handle -->
-        <img src="https://img.shields.io/badge/Codeforces-evanap0330-blue?style=for-the-badge&logo=codeforces&color=blue" alt="Codeforces Badge"/>
-    </a>
-</p>
-
 ---
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Evan%20Phillips-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/evan-phillips111)
+<a href="https://leetcode.com/evanap0330">
+    <img src="https://img.shields.io/badge/LeetCode-evanap0330-orange?style=for-the-badge&logo=leetcode&color=orange" alt="LeetCode Badge"/>
+</a>
+<a href="https://codeforces.com/profile/evanap0330"> <!-- Replace evanap0330 with your actual Codeforces handle -->
+    <img src="https://img.shields.io/badge/Codeforces-evanap0330-blue?style=for-the-badge&logo=codeforces&color=blue" alt="Codeforces Badge"/>
+</a>
