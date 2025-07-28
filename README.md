@@ -16,14 +16,7 @@
 
 <p align="center">
   <a href="https://leetcode.com/evanap0330">
-    <img height="280em" src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="LeetCode Stats"/>
-  </a>
-    <a href="https://codeforces.com/profile/evanap0330" style="margin-right: 15px;"> <!-- Added margin-right for spacing -->
-        <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/evanap003300/CF-Stats/main/output/dark_card.svg">
-            <img height="180em" src="https://raw.githubusercontent.com/evanap003300/CF-Stats/main/output/light_card.svg" alt="Codeforces Stats Card">
-        </picture>
-    </a>
+    <img height="180em" src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="LeetCode Stats"/>
 </p>
 
 ![](https://raw.githubusercontent.com/evanap003300/CF-Stats/main/output/light_card.svg#gh-dark-mode-only)
