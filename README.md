@@ -14,18 +14,10 @@
   </a>
 </p>
 
----
-
-### Competitive Programming Stuff:
-
 <p align="center">
   <img src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="Leetcode Stats" height="200"/>
-  <img src="assets/codeforces_rating_graph.png" alt="Codeforces Rating Graph" height="200"/>
 </p>
 
 ---
-
-### Connect with Me (if you want)
-
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Evan%20Phillips-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/evan-phillips111)
