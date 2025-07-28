@@ -2,6 +2,7 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&duration=2200&pause=1000&color=4AA9F1&width=800&lines=Hi%2C+I'm+Evan%2C+a+freshman+CS+student+at+UNC+Chapel+Hill!" alt="Typing SVG" />
 </p>
 
+---
 ### 🚀 GitHub Stats
 
 <p align="center">
