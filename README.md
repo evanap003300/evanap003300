@@ -20,7 +20,7 @@
 
 <p align="center">
   <img src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="Leetcode Stats" height="200"/>
-  <img src="https://cf.leed.at?id=evanap0330" alt="Codeforces Badge" height="200"/>
+  [![Codeforces](https://img.shields.io/badge/Codeforces-evanap0330-blue?style=for-the-badge&logo=codeforces)](https://codeforces.com/profile/evanap0330)
 </p>
 
 ---
