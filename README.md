@@ -20,6 +20,12 @@
   </a>
 </p>
 
+![](https://raw.githubusercontent.com/your-github-username/cf-stats/main/output/light_card.svg#gh-dark-mode-only)
+![](https://raw.githubusercontent.com/your-github-username/cf-stats/main/output/light_card.svg)
+
+![](https://raw.githubusercontent.com/sudiptob2/cf-stats/main/output/max_rating.svg)
+![](https://raw.githubusercontent.com/sudiptob2/cf-stats/main/output/rating.svg)
+
 ---
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Evan%20Phillips-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/evan-phillips111)
