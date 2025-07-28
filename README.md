@@ -19,6 +19,8 @@
     <img height="180em" src="https://leetcard.jacoblin.cool/evanap0330?theme=dark" alt="LeetCode Stats"/>
 </p>
 
+<img height="180em" src="https://raw.githubusercontent.com/evanap003300/CF-Stats/main/output/light_card.svg#gh-dark-mode-only" alt="Codeforces Stats"/>
+
 ![](https://raw.githubusercontent.com/evanap003300/CF-Stats/main/output/light_card.svg#gh-dark-mode-only)
 
 ![](https://raw.githubusercontent.com/evanap003300/CF-Stats/main/output/max_rating.svg)
