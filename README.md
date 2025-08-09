@@ -20,5 +20,15 @@
 
 ---
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Evan%20Phillips-blue?logo=linkedin&style=for-the-badge)](https://www.linkedin.com/in/evan-phillips111)
+<p align="center">
+  <a href="https://www.linkedin.com/in/evan-phillips111" style="margin-right: 10px;">
+    <img src="https://img.shields.io/badge/LinkedIn-Evan%20Phillips-blue?logo=linkedin&style=for-the-badge" alt="LinkedIn Badge"/>
+  </a>
+  <a href="https://leetcode.com/evanap0330" style="margin-right: 10px;">
+    <img src="https://img.shields.io/badge/LeetCode-evanap0330-blue?logo=leetcode&style=for-the-badge" alt="LeetCode Badge"/>
+  </a>
+  <a href="https://codeforces.com/profile/evanap003300">
+    <img src="https://img.shields.io/badge/Codeforces-evanap003300-blue?logo=codeforces&style=for-the-badge" alt="Codeforces Badge"/>
+  </a>
+</p>
 
