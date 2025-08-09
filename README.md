@@ -21,10 +21,10 @@
 ---
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/evan-phillips111" style="margin-right: 15px;">
+  <a href="https://www.linkedin.com/in/evan-phillips111" style="margin-right: 40px;">
     <img src="https://img.shields.io/badge/LinkedIn-Evan%20Phillips-blue?logo=linkedin&style=for-the-badge" alt="LinkedIn Badge"/>
   </a>
-  <a href="https://leetcode.com/evanap0330" style="margin-right: 15px;">
+  <a href="https://leetcode.com/evanap0330" style="margin-right: 40px;">
     <img src="https://img.shields.io/badge/LeetCode-evanap0330-blue?logo=leetcode&style=for-the-badge" alt="LeetCode Badge"/>
   </a>
   <a href="https://codeforces.com/profile/evanap0330">
