@@ -27,8 +27,8 @@
   <a href="https://leetcode.com/evanap0330" style="margin-right: 10px;">
     <img src="https://img.shields.io/badge/LeetCode-evanap0330-blue?logo=leetcode&style=for-the-badge" alt="LeetCode Badge"/>
   </a>
-  <a href="https://codeforces.com/profile/evanap003300">
-    <img src="https://img.shields.io/badge/Codeforces-evanap003300-blue?logo=codeforces&style=for-the-badge" alt="Codeforces Badge"/>
+  <a href="https://codeforces.com/profile/evanap0330">
+    <img src="https://img.shields.io/badge/Codeforces-evanap0330-blue?logo=codeforces&style=for-the-badge" alt="Codeforces Badge"/>
   </a>
 </p>
 
