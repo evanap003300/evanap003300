@@ -8,7 +8,7 @@
   <a style="margin-right: 15px;">
     <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=evanap003300&theme=radical&hide_border=true" alt="GitHub Streak Stats"/>
   </a>
-    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=evanap003300&layout=compact&langs_count=8&hide_border=true&theme=radical&exclude_repo=Bugscribe"/>
+    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=evanap003300&layout=compact&langs_count=8&hide_border=true&theme=radical&exclude_repo=Bugscribe&hide=tex,bibtex"/>
 </p>
 
 <p align="center">
