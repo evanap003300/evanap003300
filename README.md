@@ -6,7 +6,7 @@
 
 <p align="center">
   <a style="margin-right: 15px;">
-    <img height="260em" src="https://github-readme-streak-stats.herokuapp.com/?user=evanap003300&theme=radical&hide_border=true" alt="GitHub Streak Stats"/>
+    <img height="270em" src="https://github-readme-streak-stats.herokuapp.com/?user=evanap003300&theme=radical&hide_border=true" alt="GitHub Streak Stats"/>
   </a>
 </p>
 
