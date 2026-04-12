@@ -1,7 +1,7 @@
 """Terminal-themed GitHub profile SVG generator. Pulls live Codeforces + LeetCode stats.
 
-Uses native SVG <text>/<rect> elements (no <foreignObject>) so it renders
-through GitHub's image proxy.
+Uses native SVG <text>/<rect> with SMIL <animate> for a typing animation that loops.
+No <foreignObject>, so it renders through GitHub's image proxy.
 """
 
 import json
@@ -59,6 +59,14 @@ SECTION_GAP = 14
 FONT        = "JetBrains Mono, Fira Code, SF Mono, Consolas, monospace"
 FONT_SIZE   = 13
 CHAR_W      = 7.85  # measured for ~13px monospace
+
+# ─── animation timing (seconds) ─────────────────────────────────────
+CHAR_DUR            = 0.020   # per-character typing speed
+INITIAL_DELAY       = 0.25    # blank pause at the start of each cycle
+LINE_PAUSE          = 0.08    # pause between consecutive lines
+SECTION_PAUSE_EXTRA = 0.30    # extra pause when a line follows a gap
+HOLD_AT_END         = 2.6     # how long the finished terminal stays visible
+MIN_LINE_DUR        = 0.18    # minimum reveal time for any single line
 
 
 # ─── data fetching ──────────────────────────────────────────────────
@@ -150,81 +158,80 @@ def cf_rank_color(rank):
     }.get(str(rank).lower(), C["comment"])
 
 
-class Builder:
-    """Accumulates rows and emits positioned SVG."""
+# ─── row model + builder ────────────────────────────────────────────
+class Row:
+    __slots__ = ("kind", "draw_fn", "px_width", "follows_gap", "y")
 
+    def __init__(self, kind, draw_fn, px_width):
+        self.kind = kind
+        self.draw_fn = draw_fn
+        self.px_width = px_width
+        self.follows_gap = False
+        self.y = 0
+
+
+class Builder:
     def __init__(self):
         self.rows = []
+        self._pending_gap = False
 
-    def text(self, *spans):
-        self.rows.append(("text", spans))
+    def _add(self, row):
+        row.follows_gap = self._pending_gap
+        self._pending_gap = False
+        self.rows.append(row)
 
     def gap(self):
-        self.rows.append(("gap", None))
+        self._pending_gap = True
+
+    def text(self, *spans):
+        full = "".join(t for t, _ in spans)
+        px = len(full) * CHAR_W
+
+        def draw(y, clip_id):
+            tspans = "".join(
+                f'<tspan fill="{color}">{esc(text)}</tspan>'
+                for text, color in spans
+            )
+            return (
+                f'<g clip-path="url(#{clip_id})">'
+                f'<text x="{PAD_X}" y="{y}" xml:space="preserve">{tspans}</text>'
+                f'</g>'
+            )
+
+        self._add(Row("text", draw, px))
 
     def bar(self, value, target, label_left, label_right):
-        self.rows.append(("bar", (value, target, label_left, label_right)))
-
-    def cursor(self):
-        self.rows.append(("cursor", None))
-
-    def render_body(self):
-        out = []
-        y = BODY_TOP
-        for kind, payload in self.rows:
-            if kind == "text":
-                out.append(self._text_row(y, payload))
-                y += LINE_H
-            elif kind == "bar":
-                out.append(self._bar_row(y, *payload))
-                y += LINE_H
-            elif kind == "cursor":
-                out.append(self._cursor_row(y))
-                y += LINE_H
-            elif kind == "gap":
-                y += SECTION_GAP
-        return "".join(out), y + BODY_BOTTOM
-
-    @staticmethod
-    def _text_row(y, spans):
-        tspans = "".join(
-            f'<tspan fill="{color}">{esc(text)}</tspan>' for text, color in spans
-        )
-        return f'<text x="{PAD_X}" y="{y}" xml:space="preserve">{tspans}</text>'
-
-    @staticmethod
-    def _bar_row(y, value, target, label_left, label_right):
         bar_w = 240
         bar_h = 8
-        bar_x = PAD_X + len(label_left) * CHAR_W + 4
-        bar_y = y - 9
         ratio = max(0.0, min(1.0, value / target if target else 0))
-        return (
-            f'<text x="{PAD_X}" y="{y}" xml:space="preserve" fill="{C["comment"]}">{esc(label_left)}</text>'
-            f'<rect x="{bar_x:.1f}" y="{bar_y}" width="{bar_w}" height="{bar_h}" rx="2" '
-            f'fill="{C["bg_dark"]}" stroke="{C["border"]}"/>'
-            f'<rect x="{bar_x:.1f}" y="{bar_y}" width="{bar_w * ratio:.1f}" height="{bar_h}" rx="2" '
-            f'fill="{C["blue"]}"/>'
-            f'<text x="{bar_x + bar_w + 10:.1f}" y="{y}" xml:space="preserve" fill="{C["fg"]}">{esc(label_right)}</text>'
-        )
+        left_chars = len(label_left)
+        right_chars = len(label_right)
+        total_px = left_chars * CHAR_W + 4 + bar_w + 10 + right_chars * CHAR_W
 
-    @staticmethod
-    def _cursor_row(y):
-        return (
-            f'<text x="{PAD_X}" y="{y}" xml:space="preserve">'
-            f'<tspan fill="{C["green"]}">❯</tspan>'
-            f'</text>'
-            f'<rect x="{PAD_X + 16}" y="{y - 12}" width="8" height="14" fill="{C["fg_bright"]}">'
-            f'<animate attributeName="opacity" values="1;0;1" dur="1.05s" repeatCount="indefinite"/>'
-            f'</rect>'
-        )
+        def draw(y, clip_id):
+            bar_x = PAD_X + left_chars * CHAR_W + 4
+            bar_y = y - 9
+            return (
+                f'<g clip-path="url(#{clip_id})">'
+                f'<text x="{PAD_X}" y="{y}" xml:space="preserve" fill="{C["comment"]}">{esc(label_left)}</text>'
+                f'<rect x="{bar_x:.1f}" y="{bar_y}" width="{bar_w}" height="{bar_h}" rx="2" '
+                f'fill="{C["bg_dark"]}" stroke="{C["border"]}"/>'
+                f'<rect x="{bar_x:.1f}" y="{bar_y}" width="{bar_w * ratio:.1f}" height="{bar_h}" rx="2" '
+                f'fill="{C["blue"]}"/>'
+                f'<text x="{bar_x + bar_w + 10:.1f}" y="{y}" xml:space="preserve" fill="{C["fg"]}">{esc(label_right)}</text>'
+                f'</g>'
+            )
+
+        self._add(Row("bar", draw, total_px))
+
+    def cursor(self):
+        self._add(Row("cursor", lambda y, _id: "", 0))
 
 
-def build_terminal(cf, lc):
+# ─── content ────────────────────────────────────────────────────────
+def populate(b, cf, lc):
     cfg = CONFIG
-    b = Builder()
 
-    # whoami
     b.text(("❯ ", C["green"]), ("whoami", C["blue"]))
     b.text(
         (cfg["name"], C["fg_bright"]),
@@ -296,9 +303,83 @@ def build_terminal(cf, lc):
     b.gap()
     b.cursor()
 
-    body_svg, height = b.render_body()
-    now = datetime.now(timezone.utc).strftime("%b %d, %Y %H:%M UTC")
 
+# ─── render ─────────────────────────────────────────────────────────
+def build_terminal(cf, lc):
+    b = Builder()
+    populate(b, cf, lc)
+    rows = b.rows
+
+    # 1. Y positions
+    y = BODY_TOP
+    for row in rows:
+        if row.follows_gap:
+            y += SECTION_GAP
+        row.y = y
+        y += LINE_H
+    height = y + BODY_BOTTOM
+
+    # 2. Typing schedule
+    schedule = []  # (row, start, end) for non-cursor rows
+    t = INITIAL_DELAY
+    for row in rows:
+        if row.kind == "cursor":
+            continue
+        if row.follows_gap:
+            t += SECTION_PAUSE_EXTRA
+        start = t
+        dur = max(MIN_LINE_DUR, (row.px_width / CHAR_W) * CHAR_DUR)
+        end = start + dur
+        schedule.append((row, start, end))
+        t = end + LINE_PAUSE
+
+    typing_end = t
+    cycle = typing_end + HOLD_AT_END
+
+    # 3. ClipPath defs + clipped row content
+    clip_defs = []
+    body_parts = []
+    for i, (row, start, end) in enumerate(schedule):
+        clip_id = f"c{i}"
+        anim_w = row.px_width + 6
+        s_pct = start / cycle
+        e_pct = end / cycle
+        clip_defs.append(
+            f'<clipPath id="{clip_id}">'
+            f'<rect x="{PAD_X - 2}" y="{row.y - LINE_H + 4}" width="0" height="{LINE_H}">'
+            f'<animate attributeName="width" '
+            f'dur="{cycle:.3f}s" repeatCount="indefinite" '
+            f'keyTimes="0;{s_pct:.4f};{e_pct:.4f};1" '
+            f'values="0;0;{anim_w:.1f};{anim_w:.1f}"/>'
+            f'</rect>'
+            f'</clipPath>'
+        )
+        body_parts.append(row.draw_fn(row.y, clip_id))
+
+    # 4. Cursor (appears after typing finishes; blinks while visible)
+    cursor_row = next((r for r in rows if r.kind == "cursor"), None)
+    cursor_svg = ""
+    if cursor_row:
+        cy = cursor_row.y
+        appear_pct = typing_end / cycle
+        eps = 0.0005
+        cursor_svg = (
+            f'<g opacity="0">'
+            f'<animate attributeName="opacity" '
+            f'dur="{cycle:.3f}s" repeatCount="indefinite" '
+            f'keyTimes="0;{max(0.0001, appear_pct - eps):.4f};{appear_pct:.4f};1" '
+            f'values="0;0;1;1"/>'
+            f'<text x="{PAD_X}" y="{cy}" xml:space="preserve">'
+            f'<tspan fill="{C["green"]}">❯</tspan>'
+            f'</text>'
+            f'<rect x="{PAD_X + 16}" y="{cy - 12}" width="8" height="14" fill="{C["fg_bright"]}">'
+            f'<animate attributeName="opacity" values="1;0;1" dur="1.05s" repeatCount="indefinite"/>'
+            f'</rect>'
+            f'</g>'
+        )
+
+    # 5. Header
+    now = datetime.now(timezone.utc).strftime("%b %d, %Y %H:%M UTC")
     header = (
         f'<rect x="0" y="0" width="{WIDTH}" height="{HEADER_H}" fill="{C["bg_dark"]}"/>'
         f'<line x1="0" y1="{HEADER_H}" x2="{WIDTH}" y2="{HEADER_H}" stroke="{C["border"]}"/>'
@@ -314,11 +395,15 @@ def build_terminal(cf, lc):
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{height}" '
         f'viewBox="0 0 {WIDTH} {height}" font-family="{FONT}" font-size="{FONT_SIZE}">'
-        f'<defs><clipPath id="r"><rect x="0" y="0" width="{WIDTH}" height="{height}" rx="10" ry="10"/></clipPath></defs>'
+        f'<defs>'
+        f'<clipPath id="r"><rect x="0" y="0" width="{WIDTH}" height="{height}" rx="10" ry="10"/></clipPath>'
+        f'{"".join(clip_defs)}'
+        f'</defs>'
         f'<g clip-path="url(#r)">'
         f'<rect width="{WIDTH}" height="{height}" fill="{C["bg"]}"/>'
         f'{header}'
-        f'<g>{body_svg}</g>'
+        f'<g>{"".join(body_parts)}</g>'
+        f'{cursor_svg}'
         f'</g>'
         f'<rect x="0.5" y="0.5" width="{WIDTH-1}" height="{height-1}" rx="10" ry="10" '
         f'fill="none" stroke="{C["border"]}"/>'
