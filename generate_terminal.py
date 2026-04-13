@@ -15,7 +15,7 @@ from pathlib import Path
 CONFIG = {
     "cf_handle":   "evanap0330",
     "lc_handle":   "evanap0330",
-    "name":        "Evan Phillips",
+    "name":        "Evan",
     "tagline":     "CS @ UNC Chapel Hill",
     "interests":   ["quant dev", "systems programming", "competitive programming"],
     "projects": [
