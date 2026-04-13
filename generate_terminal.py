@@ -21,7 +21,7 @@ CONFIG = {
     "projects": [
         ("matching-engine/", "C++ low-latency order matching"),
         ("thanOS/",          "64-bit operating system from scratch"),
-        ("lexem/",           "daily active users in production"),
+        ("yolo-to-3d/",      "drone YOLO → 3D OptiTrack coords · paper"),
     ],
     "cm_target":   1900,
     "show_codeforces": True,
@@ -244,7 +244,7 @@ def populate(b, cf, lc):
         b.text(("❯ ", C["green"]), ("codeforces ", C["blue"]), ("--stats", C["cyan"]))
         b.text(
             ("  rating    ", C["comment"]),
-            (str(cf["rating"]), C["red"]),
+            (str(cf["rating"]), C["yellow"]),
             ("  ", C["fg"]),
             (f"({cf['rank']})", cf_rank_color(cf["rank"])),
             ("    max ", C["comment"]),
