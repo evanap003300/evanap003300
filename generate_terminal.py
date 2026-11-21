@@ -19,10 +19,11 @@ CONFIG = {
     "name":        "Evan Phillips",
     "tagline":     "CS @ UNC Chapel Hill",
     "tagline_extra": ["4.0 GPA"],
+    "now_file": "experience.txt",
     "now": [
         ("incoming", "Trading Systems Engineer intern @ *Susquehanna (SIG)*", "summer 2027"),
-        ("research", "UNC Computational Robotics Lab", "Bayesian optimization for surgical robots"),
-        ("before",   "SWE intern @ Wells Fargo", "ML research @ USC, SPIE 2026 paper"),
+        ("2026",     "SWE intern @ Wells Fargo", "research @ UNC Computational Robotics Lab"),
+        ("2025",     "ML research @ USC", "SPIE 2026 paper"),
     ],
     "interests":   ["quant dev", "systems programming", "competitive programming"],
     "projects": [
@@ -267,7 +268,7 @@ def populate(b, cf, lc):
 
     if cfg["show_now"]:
         b.gap()
-        b.text(prompt, ("cat ", C["blue"]), ("now.txt", C["cyan"]))
+        b.text(prompt, ("cat ", C["blue"]), (cfg["now_file"], C["cyan"]))
         label_w = max(len(label) for label, _, _ in cfg["now"]) + 3
         for label, what, detail in cfg["now"]:
             spans = [("  ", C["fg"]), (label.ljust(label_w), C["teal"])]
