@@ -34,7 +34,7 @@ CONFIG = {
     "results_file": "orderbook/results.txt",
     "results":      "*162.8M* orders in *49.4 s*    p50 *53 ns*    p99 *437 ns*    p99.9 *2.0 µs*",
     "highlights": [
-        "NSA Codebreaker Challenge 2026  ·  *23rd of ~7,000*",
+        "NSA Codebreaker Challenge 2026  ·  *23rd nationwide* to solve all tasks",
         "SPIE 2026 co-author  ·  UNC ICPC team",
     ],
     "cm_target":   1900,
