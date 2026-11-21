@@ -27,7 +27,7 @@ CONFIG = {
     "interests":   ["quant dev", "systems programming", "competitive programming"],
     "projects": [
         ("orderbook/",      "C++17 matching engine · full NASDAQ ITCH day · lock-free feed handler"),
-        ("thanOS/",         "x86-64 kernel from scratch · ring-3 processes · SMP boot"),
+        ("thanOS/",         "x86-64 multicore kernel from scratch · ring-3 processes on every core"),
         ("mlp-yolo-to-3d/", "drone localization without GPS · SPIE 2026 paper"),
     ],
     # Measured numbers from the orderbook README (full trading day, isolated core).
