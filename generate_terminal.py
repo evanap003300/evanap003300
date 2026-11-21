@@ -12,22 +12,39 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 # ─── config ─────────────────────────────────────────────────────────
+# Text between *asterisks* is drawn in the highlight colour.
 CONFIG = {
     "cf_handle":   "evanap0330",
     "lc_handle":   "evanap0330",
-    "name":        "Evan",
+    "name":        "Evan Phillips",
     "tagline":     "CS @ UNC Chapel Hill",
+    "tagline_extra": ["4.0 GPA"],
+    "now": [
+        ("incoming", "Trading Systems Engineer intern @ *Susquehanna (SIG)*", "summer 2027"),
+        ("research", "UNC Computational Robotics Lab", "Bayesian optimization for surgical robots"),
+        ("before",   "SWE intern @ Wells Fargo", "ML research @ USC, SPIE 2026 paper"),
+    ],
     "interests":   ["quant dev", "systems programming", "competitive programming"],
     "projects": [
-        ("orderbook/",      "C++17 matching engine · NASDAQ ITCH 5.0 · 53 ns median"),
+        ("orderbook/",      "C++17 matching engine · full NASDAQ ITCH day · lock-free feed handler"),
         ("thanOS/",         "x86-64 kernel from scratch · ring-3 processes · SMP boot"),
-        ("mlp-yolo-to-3d/", "drone localization from two cameras · SPIE 2026 paper"),
+        ("mlp-yolo-to-3d/", "drone localization without GPS · SPIE 2026 paper"),
+    ],
+    # Measured numbers from the orderbook README (full trading day, isolated core).
+    "results_file": "orderbook/results.txt",
+    "results":      "*162.8M* orders in *49.4 s*    p50 *53 ns*    p99 *437 ns*    p99.9 *2.0 µs*",
+    "highlights": [
+        "NSA Codebreaker Challenge 2026  ·  *23rd of ~7,000*",
+        "SPIE 2026 co-author  ·  UNC ICPC team",
     ],
     "cm_target":   1900,
+    "show_now":        True,
+    "show_projects":   True,
+    "show_results":    True,
+    "show_highlights": True,
     "show_codeforces": False,
     "show_leetcode":   True,
-    "show_interests":  True,
-    "show_projects":   True,
+    "show_interests":  False,
     "output":      "terminal.svg",
 }
 
@@ -61,12 +78,12 @@ FONT_SIZE   = 13
 CHAR_W      = 7.85  # measured for ~13px monospace
 
 # ─── animation timing (seconds) ─────────────────────────────────────
-CHAR_DUR            = 0.020   # per-character typing speed
+CHAR_DUR            = 0.007   # per-character typing speed
 INITIAL_DELAY       = 0.25    # blank pause at the start of each cycle
-LINE_PAUSE          = 0.08    # pause between consecutive lines
-SECTION_PAUSE_EXTRA = 0.30    # extra pause when a line follows a gap
-HOLD_AT_END         = 2.6     # how long the finished terminal stays visible
-MIN_LINE_DUR        = 0.18    # minimum reveal time for any single line
+LINE_PAUSE          = 0.05    # pause between consecutive lines
+SECTION_PAUSE_EXTRA = 0.22    # extra pause when a line follows a gap
+HOLD_AT_END         = 16.0    # how long the finished terminal stays visible
+MIN_LINE_DUR        = 0.12    # minimum reveal time for any single line
 
 
 # ─── data fetching ──────────────────────────────────────────────────
@@ -141,6 +158,11 @@ def fetch_leetcode(handle):
 # ─── svg helpers ────────────────────────────────────────────────────
 def esc(s):
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def rich(text, base, hi):
+    """Split 'a *b* c' into coloured spans: plain parts in `base`, starred parts in `hi`."""
+    return [(part, hi if i % 2 else base) for i, part in enumerate(text.split("*")) if part]
 
 
 def cf_rank_color(rank):
@@ -231,17 +253,54 @@ class Builder:
 # ─── content ────────────────────────────────────────────────────────
 def populate(b, cf, lc):
     cfg = CONFIG
+    prompt = ("❯ ", C["green"])
 
-    b.text(("❯ ", C["green"]), ("whoami", C["blue"]))
-    b.text(
+    b.text(prompt, ("whoami", C["blue"]))
+    spans = [
         (cfg["name"], C["fg_bright"]),
         ("  —  ", C["comment"]),
         (cfg["tagline"], C["purple"]),
-    )
+    ]
+    for extra in cfg.get("tagline_extra", []):
+        spans += [("  ·  ", C["comment"]), (extra, C["yellow"])]
+    b.text(*spans)
+
+    if cfg["show_now"]:
+        b.gap()
+        b.text(prompt, ("cat ", C["blue"]), ("now.txt", C["cyan"]))
+        label_w = max(len(label) for label, _, _ in cfg["now"]) + 3
+        for label, what, detail in cfg["now"]:
+            spans = [("  ", C["fg"]), (label.ljust(label_w), C["teal"])]
+            spans += rich(what, C["fg_bright"], C["yellow"])
+            if detail:
+                spans += [("  ·  ", C["comment"]), (detail, C["fg"])]
+            b.text(*spans)
+
+    if cfg["show_projects"]:
+        b.gap()
+        b.text(prompt, ("ls ", C["blue"]), ("~/projects", C["cyan"]))
+        name_w = max(len(name) for name, _ in cfg["projects"]) + 2
+        for name, desc in cfg["projects"]:
+            b.text(
+                ("  ", C["fg"]),
+                (name.ljust(name_w), C["blue"]),
+                *rich(desc, C["fg"], C["yellow"]),
+            )
+
+    if cfg["show_results"]:
+        b.gap()
+        b.text(prompt, ("cat ", C["blue"]), (cfg["results_file"], C["cyan"]))
+        b.text(("  ", C["fg"]), *rich(cfg["results"], C["comment"], C["yellow"]))
+
+    if cfg["show_highlights"]:
+        b.gap()
+        b.text(prompt, ("cat ", C["blue"]), ("highlights.txt", C["cyan"]))
+        for line in cfg["highlights"]:
+            b.text(("  ", C["fg"]), *rich(line, C["fg"], C["yellow"]))
 
     if cfg["show_codeforces"]:
         b.gap()
-        b.text(("❯ ", C["green"]), ("codeforces ", C["blue"]), ("--stats", C["cyan"]))
+        b.text(prompt, ("codeforces ", C["blue"]), ("--stats", C["cyan"]))
         b.text(
             ("  rating    ", C["comment"]),
             (str(cf["rating"]), C["yellow"]),
@@ -262,15 +321,15 @@ def populate(b, cf, lc):
             label_right=f"{cf['rating']} / {cfg['cm_target']}  ({pct}%)",
         )
 
-    if cfg["show_leetcode"]:
+    # Skip the block rather than print zeros if the LeetCode fetch failed
+    if cfg["show_leetcode"] and lc["ok"]:
         b.gap()
-        b.text(("❯ ", C["green"]), ("leetcode ", C["blue"]), ("--solved", C["cyan"]))
-        b.text(
-            ("  total     ", C["comment"]),
-            (str(lc["total"]), C["fg_bright"]),
-        )
+        b.text(prompt, ("leetcode ", C["blue"]), ("--solved", C["cyan"]))
         b.text(
             ("  ", C["fg"]),
+            (str(lc["total"]), C["fg_bright"]),
+            (" solved", C["comment"]),
+            ("    ", C["fg"]),
             (f"easy {lc['easy']}", C["green"]),
             ("    ", C["fg"]),
             (f"med {lc['medium']}", C["yellow"]),
@@ -280,7 +339,7 @@ def populate(b, cf, lc):
 
     if cfg["show_interests"]:
         b.gap()
-        b.text(("❯ ", C["green"]), ("cat ", C["blue"]), ("interests.txt", C["cyan"]))
+        b.text(prompt, ("cat ", C["blue"]), ("interests.txt", C["cyan"]))
         spans = [("  ", C["fg"])]
         cols = [C["purple"], C["blue"], C["teal"]]
         for i, item in enumerate(cfg["interests"]):
@@ -288,17 +347,6 @@ def populate(b, cf, lc):
                 spans.append(("  ·  ", C["comment"]))
             spans.append((item, cols[i % len(cols)]))
         b.text(*spans)
-
-    if cfg["show_projects"]:
-        b.gap()
-        b.text(("❯ ", C["green"]), ("ls ", C["blue"]), ("~/projects", C["cyan"]))
-        name_w = max(len(name) for name, _ in cfg["projects"]) + 2
-        for name, desc in cfg["projects"]:
-            b.text(
-                ("  ", C["fg"]),
-                (name.ljust(name_w), C["blue"]),
-                (desc, C["comment"]),
-            )
 
     b.gap()
     b.cursor()
@@ -346,7 +394,7 @@ def build_terminal(cf, lc):
         e_pct = end / cycle
         clip_defs.append(
             f'<clipPath id="{clip_id}">'
-            f'<rect x="{PAD_X - 2}" y="{row.y - LINE_H + 4}" width="0" height="{LINE_H}">'
+            f'<rect x="{PAD_X - 2}" y="{row.y - LINE_H + 4}" width="{anim_w:.1f}" height="{LINE_H}">'
             f'<animate attributeName="width" '
             f'dur="{cycle:.3f}s" repeatCount="indefinite" '
             f'keyTimes="0;{s_pct:.4f};{e_pct:.4f};1" '
@@ -364,7 +412,7 @@ def build_terminal(cf, lc):
         appear_pct = typing_end / cycle
         eps = 0.0005
         cursor_svg = (
-            f'<g opacity="0">'
+            f'<g opacity="1">'
             f'<animate attributeName="opacity" '
             f'dur="{cycle:.3f}s" repeatCount="indefinite" '
             f'keyTimes="0;{max(0.0001, appear_pct - eps):.4f};{appear_pct:.4f};1" '
